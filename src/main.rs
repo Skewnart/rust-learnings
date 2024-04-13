@@ -28,3 +28,20 @@ fn volume_sphere(rayon : f64) -> f64 {
 //i8, i16, i32, i64     integers
 //u8, u16, u32, u64     unsigned integers
 //f32, f64              float / double
+
+
+//#[test] pour tranformer une méthode en test
+//assert!()
+//assert_eq!()
+//assert_ne!()
+#[test]
+fn test_perimetre_cercle() {
+    let perimetre = perimetre_cercle(5.0);
+    assert!(perimetre > 31.0 && perimetre < 32.0);
+}
+
+#[test]
+fn test_volume_sphere() {
+    let volume = volume_sphere(5.0);
+    assert!(volume > 523.0 && volume < 524.0);
+}
