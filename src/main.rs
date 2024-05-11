@@ -5,9 +5,9 @@ mod module;
 mod test;
 
 fn main() {
-    //no exec                               //cargo
-    //no exec                               //tests
+    //no exec                               //1. Cargo command with parameters
+    //no exec                               //2. Tests (how to write)
     
-    //fonctions_variables::call();          //fonctions, variables
-    //module::functions::function();        //module
+    //fonctions_variables::call();          //3. Write functions and variables
+    //module::functions::function();        //4. Module management
 }
