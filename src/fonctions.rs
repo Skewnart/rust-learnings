@@ -1,16 +1,9 @@
 
-//"let"     : constante
-//"let mut" : variable
 //"fn"      : fonction
 //"-> type" : type retour de fonction
 //Un paramètre de fonction sera par défaut constant
 // dernière instruction pas besoin de "return" (mais on peut si besoin)
 //pub : public. Une fonction appelable à l'extérieur du module
-
-//TYPE primitifs :
-//i8, i16, i32, i64     integers
-//u8, u16, u32, u64     unsigned integers
-//f32, f64              float / double
 
 pub fn call(){
     let p = perimetre_cercle(5.0);
