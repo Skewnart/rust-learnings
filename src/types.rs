@@ -1,5 +1,5 @@
 
-//"let"     : constante
+//"let"     : constant
 //"let mut" : variable
 
 //TYPE primitifs :
@@ -10,7 +10,8 @@
 //bool                  boolean
 //char                  character
 
-//tuple                 ! warning, non named tuple
+//tuple                 ! warning, non named tuple -> see "structures" for named ones
+//unit tuple            empty tuple : ()
 
 pub fn init_var() {
     let var_i32 : i32 = 0;
@@ -22,6 +23,8 @@ pub fn init_var() {
     let var_tuple = (10, false, 15.42);
     println!("{}, {}", var_tuple.0, var_tuple.1);
     
+    let var_unit_tuple = ();
+
     print_type_of(&var_isize);
 }
 
