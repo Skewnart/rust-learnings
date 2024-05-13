@@ -10,8 +10,8 @@
 //bool                  boolean
 //char                  character
 
-//tuple                 ! warning, non named tuple -> see "structures" for named ones
-//unit tuple            empty tuple : ()
+//tuple                 ! warning, tuple non nommées -> voir "structures" pour les nommées
+//unit tuple            Tuple vide : ()
 
 pub fn init_var() {
     let var_i32 : i32 = 0;
