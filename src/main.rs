@@ -7,6 +7,7 @@ mod test;
 mod structures;
 mod pointers;
 mod arrays;
+mod strings;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -23,6 +24,8 @@ fn main() {
     //pointers::using_pointers();
     
     //arrays::using_arrays();               //8. Arrays (array, vector, slice)
-    // arrays::using_vectors();
-    arrays::using_slice();
+    //arrays::using_vectors();
+    //arrays::using_slice();
+
+    //strings::using_str();                 //9. Strings
 }
