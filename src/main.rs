@@ -8,6 +8,7 @@ mod structures;
 mod pointers;
 mod arrays;
 mod strings;
+mod borrow;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -28,4 +29,5 @@ fn main() {
     //arrays::using_slice();
 
     //strings::using_str();                 //9. Strings
+    //borrow::example_borrow_owner();       //10. Borrow / Owner
 }
