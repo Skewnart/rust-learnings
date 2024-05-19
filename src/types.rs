@@ -15,10 +15,10 @@
 
 pub fn init_var() {
     let var_i32 : i32 = 0;
-    let var_f64: f64 = 0.1;
+    let var_f64 : f64 = 0.1;
     let var_isize : isize = 64;
     let var_bool : bool = false;
-    let var_char: char = '\0';
+    let var_char : char = '\0';
 
     let var_tuple = (10, false, 15.42);
     println!("{}, {}", var_tuple.0, var_tuple.1);
@@ -26,6 +26,8 @@ pub fn init_var() {
     let var_unit_tuple = ();
 
     print_type_of(&var_isize);
+
+    let var_underscore = 0_i32;
 }
 
 fn print_type_of<T>(_: &T) {
