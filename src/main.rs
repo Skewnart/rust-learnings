@@ -5,6 +5,7 @@ mod fonctions;
 mod module;
 mod test;
 mod structures;
+mod structures_impl;
 mod pointers;
 mod arrays;
 mod strings;
@@ -17,8 +18,10 @@ fn main() {
     //types::init_var();                    //3. Types
     //fonctions_variables::call();          //4. Write functions and variables
     //module::functions::function();        //5. Module management
+
     //structures::using_structures();       //6. Structures (structure, tuple)
     //structures::using_structure_tuple();
+    structures_impl::using_impl();             //6.5 Impl with structures
     
     //pointers::using_refs();               //7. References (reference, box, pointer)
     //pointers::using_box();
