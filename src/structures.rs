@@ -36,13 +36,17 @@ pub fn using_structures() {
 //Exemple :
 
 struct Meter(f32);
+pub struct Point(pub f32, pub f32);             //tuple et propriétés publics
 
 pub fn using_structure_tuple() {
     let distance = Meter(12.5);
+    let pnt = Point(1_f32, 1_f32);
 
     //Par destructuration (destructuring) :
     let Meter(m) = distance; 
     println!("{}", m);
+
+    let Point(x, y) = pnt;
 
     //Par accès direct, moins lisible :
     let m2 = distance.0;
