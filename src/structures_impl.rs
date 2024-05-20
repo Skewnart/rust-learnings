@@ -7,7 +7,7 @@ struct Rectangle {
 impl Rectangle {
     //Methode de classe (statique) (sans &self) qui fait office de constructeur
     pub fn new(w: f64, h: f64) -> Self {
-        Rectangle { width : w, height : h }
+        Self { width : w, height : h }
     }
 
     //Deux méthodes d'objets

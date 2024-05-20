@@ -10,6 +10,7 @@ mod pointers;
 mod arrays;
 mod strings;
 mod borrow;
+mod structures_generic;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -21,7 +22,6 @@ fn main() {
 
     //structures::using_structures();       //6. Structures (structure, tuple)
     //structures::using_structure_tuple();
-    structures_impl::using_impl();             //6.5 Impl with structures
     
     //pointers::using_refs();               //7. References (reference, box, pointer)
     //pointers::using_box();
@@ -30,7 +30,10 @@ fn main() {
     //arrays::using_arrays();               //8. Arrays (array, vector, slice)
     //arrays::using_vectors();
     //arrays::using_slice();
-
+    
     //strings::using_str();                 //9. Strings
     //borrow::example_borrow_owner();       //10. Borrow / Owner
+
+    //structures_impl::using_impl();        //11. Impl with structures
+    structures_generic::using_generic();
 }
