@@ -11,6 +11,7 @@ mod arrays;
 mod strings;
 mod borrow;
 mod structures_generic;
+mod structures_references;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -34,6 +35,8 @@ fn main() {
     //strings::using_str();                 //9. Strings
     //borrow::example_borrow_owner();       //10. Borrow / Owner
 
-    //structures_impl::using_impl();        //11. Impl with structures
-    structures_generic::using_generic();
+                                            //11. Structures :
+    //structures_impl::using_impl();        // Impl
+    //structures_generic::using_generic();  // Generics
+    //structures_references::using_ref();   // References
 }
