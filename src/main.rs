@@ -13,6 +13,8 @@ mod borrow;
 mod structures_generic;
 mod structures_references;
 mod structures_predefined_trait;
+mod enumerations;
+mod motifs;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -41,4 +43,7 @@ fn main() {
     //structures_generic::using_generic();  // Generics
     //structures_references::using_ref();   // References
     //structures_predefined_trait::using_traits();   // Traits (prédéfinis)
+
+    //enumerations::using_enum();           //12. Enumerations
+    //motifs::using_pattern_matching();     // Pattern matching
 }
