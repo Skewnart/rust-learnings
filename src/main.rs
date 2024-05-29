@@ -15,6 +15,7 @@ mod structures_references;
 mod structures_predefined_trait;
 mod enumerations;
 mod motifs;
+mod traits;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -46,4 +47,7 @@ fn main() {
 
     //enumerations::using_enum();           //12. Enumerations
     //motifs::using_pattern_matching();     // Pattern matching
+
+    //traits::using_traits();               //13. Traits
+    //traits::using_traits_2();
 }
