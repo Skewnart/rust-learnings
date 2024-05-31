@@ -29,4 +29,14 @@ pub fn using_traits() {
     if p3 == p1 {
         println!("PartialEq : {}", p3 == p1);
     }
+
+    let vect = vec![1, 2];
+    for el in &vect {
+
+    }
+    let mut iter = vect.iter();
+
+    while let Some(element) = iter.next() {
+
+    }
 }
