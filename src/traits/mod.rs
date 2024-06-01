@@ -1,3 +1,10 @@
+// Trait d'itération : Iterator, IntoIterator
+// Trait Drop : s'execute à la destruction d'une valeur
+// Deref, DerefMut : relatif au pointeurs intelligents pour le déréférencement
+// AsRef, AsMut, Borrow et BorrowMut, traits d'emprunt de référence
+// From, Into pour les conversions implicites
+// ToOwned qui permet de convertir une référence en valeur
+
 mod chien;
 mod chat;
 mod animal;

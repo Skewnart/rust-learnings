@@ -1,9 +1,10 @@
-// On voit ici les traits "prédéfinis", cad les traits déjà implémentés pour les structures classiques
-// Il y en a quatre :
-//  - Copy              Copie implicite grâce à l'opérateur d'affectation (copie bit à bit : ne peut pas être surchargé)
-//  - Clone             Copie explicite avec la méthode Clone()
-//  - Debug             Permet l'affichage rapide de l'instance avec son "fmt" (avec :? dans un print!)
-//  - PartialEq         Permet la comparaison d'objet avec == et !=
+// Traits "prédéfinis" -> les traits dont une implémentation par défaut existe pour les structures classiques :
+// - Eq, PartialEq, Ord et PartialOrd, comparaison d'objets
+// - Clone, qui permet de créer T depuis une référence &T.
+// - Copy, copie bit à bit -> passage de la sémantique move à la sémantique copy. (ne peut pas être surchargé)
+// - Hash, qui permet de produire un hachage depuis &T.
+// - Default, qui permet de créer une instance par défaut du type considéré.
+// - Debug, qui permet de formater une sortie sur {:?}.
 
 #[derive(Copy, Clone, Debug, PartialEq)]
 struct Point {
