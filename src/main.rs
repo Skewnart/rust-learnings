@@ -17,6 +17,7 @@ mod enumerations;
 mod motifs;
 mod traits;
 mod trait_operator_overload;
+mod char_string;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -54,4 +55,7 @@ fn main() {
     //traits::using_traits_2();
     
     //trait_operator_overload::using_operators();     //12 b. Operators overload
+
+    //char_string::using_chars();           //15. Char, String (String & str)
+    char_string::using_strings();
 }
