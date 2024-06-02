@@ -57,5 +57,6 @@ fn main() {
     //trait_operator_overload::using_operators();     //12 b. Operators overload
 
     //char_string::using_chars();           //15. Char, String (String & str)
-    char_string::using_strings();
+    //char_string::using_strings();
+    char_string::using_regex();
 }

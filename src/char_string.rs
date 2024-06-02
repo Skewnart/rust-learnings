@@ -1,3 +1,6 @@
+extern crate regex;
+use regex::Regex;
+
 // un char se code sur 4 octets (32 bits)
 // str (ou &str, &'static str) est le type primitif des strings. Il s'agit d'une séquence d'octet non mutable de chars UTF8
 //      taille non connue. C'est le "string slice" comme on l'appelle
@@ -75,4 +78,22 @@ pub fn using_strings() {
     extraction.ends_with("es");
 
     let replaced = extraction.replace("es", "se");
+}
+
+pub fn using_regex() {
+    let date_exemple = "2022-01-17";
+
+    let rex = Regex::new(r"(?x) 
+    (?P<annee>\d{4}) 
+    - 
+    (?P<mois>\d{2}) 
+    - 
+    (?P<jour>\d{2}) 
+    ").unwrap(); 
+
+    let parsing_date = rex.captures(date_exemple).unwrap(); 
+ 
+    println!("Année : {}", &parsing_date["annee"]); 
+    println!("Mois : {}", &parsing_date["mois"]); 
+    println!("Jour : {}", &parsing_date["jour"]); 
 }
