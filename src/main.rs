@@ -18,6 +18,7 @@ mod motifs;
 mod traits;
 mod trait_operator_overload;
 mod char_string;
+mod vectors;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -58,5 +59,7 @@ fn main() {
 
     //char_string::using_chars();           //15. Char, String (String & str)
     //char_string::using_strings();
-    char_string::using_regex();
+    //char_string::using_regex();
+
+    vectors::using_vectors();             //16. Vectors
 }
