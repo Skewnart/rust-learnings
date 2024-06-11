@@ -22,6 +22,7 @@ mod vectors;
 mod collections;
 mod closures;
 mod threads;
+mod trait_object_dyn;
 
 fn main() {
     //no exec                               //1. Cargo command with parameters
@@ -67,5 +68,6 @@ fn main() {
     //vectors::using_vectors();             //16. Vectors
     //collections::using_collections();     //17. Collections
     //closures::using_closure();            //18. Closures
-    threads::using_threads();             //19. Threads
+    //threads::using_threads();             //19. Threads
+    trait_object_dyn::using_trait_object(); //20. Trait Object
 }
