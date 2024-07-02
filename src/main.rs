@@ -52,24 +52,24 @@ fn main() {
     //structures_generic::using_generic();  // Generics
     //structures_references::using_ref();   // References
 
-    //trait_predefined::using_traits();     //12 a. Traits (prédéfinis)
+    //trait_predefined::using_traits();     //12. Traits (prédéfinis)
 
     //enumerations::using_enum();           //13. Enumerations
-    //motifs::using_pattern_matching();     // Pattern matching
+    //motifs::using_pattern_matching();     //14. Pattern matching
 
-    //traits::using_traits();               //14. Traits
+    //traits::using_traits();               //15. Traits
     //traits::using_traits_2();
     
-    //trait_operator_overload::using_operators();     //12 b. Operators overload
+    //trait_operator_overload::using_operators();     //16. Operators overload (linked to 12. Predefined Traits)
 
-    //char_string::using_chars();           //15. Char, String (String & str)
+    //char_string::using_chars();           //17. Char, String (String & str)
     //char_string::using_strings();
     //char_string::using_regex();
 
-    //vectors::using_vectors();             //16. Vectors
-    //collections::using_collections();     //17. Collections
-    //closures::using_closure();            //18. Closures
-    //threads::using_threads();             //19. Threads
-    //trait_object_dyn::using_trait_object(); //20. Trait Object
-    unsafe_code::using_unsafe();          //21. Unsafe
+    //vectors::using_vectors();             //18. Vectors
+    //collections::using_collections();     //19. Collections
+    //closures::using_closure();            //20. Closures
+    //threads::using_threads();             //21. Threads
+    //trait_object_dyn::using_trait_object(); //22. Trait Object
+    unsafe_code::using_unsafe();          //23. Unsafe
 }
