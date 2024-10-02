@@ -3,7 +3,7 @@
 ## Basic commands
 ```
 cargo new
-    --bin : binary
+    --bin : binary               : (default)
     --lib : library
 ```
 
@@ -13,9 +13,10 @@ cargo build ("cargo b")
 ```
 
 ```
-cargo run ("cargo r")
-cargo test ("cargo t")
-cargo clean
+cargo check                      : checks the code / displays warnings & errors
+cargo run ("cargo r")            : builds and executes the result
+cargo test ("cargo t")           : executes test flags
+cargo clean                      : cleans `target` directory (previous builds)
 ```
 
 ```
