@@ -11,6 +11,9 @@ pub fn using_arrays() {
     let mut my_array : [i32; 8] = [2, 6, 1, 3, 5, 9, 7, 8];
     let second_array = [false, false, true];        //fonctionne puisque types cohérents (sans typer)
 
+    //générer un array de 5 éléments identiques
+    let third_array = [5; 10]; // [5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
+
     println!("4e élément : {}", my_array[3]);
     my_array.sort();
     for num in my_array.iter() {
