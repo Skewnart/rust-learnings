@@ -1,5 +1,6 @@
 #![allow(unused)]
 
+mod variable;
 mod types;
 mod fonctions;
 mod module;
@@ -26,9 +27,13 @@ mod trait_object_dyn;
 mod unsafe_code;
 
 fn main() {
+
+    //TODO A refaire avec le summary du coup
+    
     //no exec                               //1. Cargo command with parameters
     //no exec                               //2. Tests (how to write)
 
+    //variable::using_variables();
     //types::init_var();                    //3. Types
     //fonctions::call();                    //4. Write functions and variables
     //module::functions::function();        //5. Module management

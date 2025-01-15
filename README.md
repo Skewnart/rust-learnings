@@ -2,7 +2,7 @@
 
 My Rust learnings cheatsheet. Currently WIP and will probably never gonna end.
 
-## Summary
+## Summary (old, don't mind if there are broken or partial links)
 
 1. [Cargo](https://github.com/Skewnart/rust-learnings/blob/main/src/cargo.md) (Cargo command with parameters) (MD)
 2. [Tests](https://github.com/Skewnart/rust-learnings/blob/main/src/test.rs) (Tests - how to write)
@@ -30,6 +30,15 @@ My Rust learnings cheatsheet. Currently WIP and will probably never gonna end.
 21. [Threads](https://github.com/Skewnart/rust-learnings/blob/main/src/threads.rs)
 22. [Trait Object](https://github.com/Skewnart/rust-learnings/blob/main/src/trait_object_dyn.rs)
 23. [Unsafe](https://github.com/Skewnart/rust-learnings/blob/main/src/unsafe_code.rs)
+
+## New summary
+
+1. [Cargo](https://github.com/Skewnart/rust-learnings/blob/main/src/cargo.md) (Cargo command with parameters) (MD)
+2. [Variables](https://github.com/Skewnart/rust-learnings/blob/main/src/variable.rs)
+3. [Types](https://github.com/Skewnart/rust-learnings/blob/main/src/types.rs)
+
+[Current in doc](https://doc.rust-lang.org/stable/book/ch03-03-how-functions-work.html)
+- REFAIRE AUSSI L'ORDRE DANS MAIN.RS
 
 ## Clone and launch it
 

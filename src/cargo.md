@@ -1,10 +1,13 @@
 # Cargo
 
 ## Basic commands
+
 ```
 cargo new
     --bin : binary               : (default)
     --lib : library
+
+cargo init                       : create a new Cargo.toml package
 ```
 
 ```
@@ -22,7 +25,6 @@ cargo clean                      : cleans `target` directory (previous builds)
 ```
 cargo --version
 ```
-
 
 ## Configuration :
 
