@@ -7,7 +7,7 @@ My Rust learnings cheatsheet. Currently WIP and will probably never gonna end.
 1. [Cargo](https://github.com/Skewnart/rust-learnings/blob/main/src/cargo.md) (Cargo command with parameters) (MD)
 2. [Tests](https://github.com/Skewnart/rust-learnings/blob/main/src/test.rs) (Tests - how to write)
 3. [Types](https://github.com/Skewnart/rust-learnings/blob/main/src/types.rs)
-4. [Functions / Variables](https://github.com/Skewnart/rust-learnings/blob/main/src/fonctions.rs) (Write functions and variables)
+4. [Functions / Variables](https://github.com/Skewnart/rust-learnings/blob/main/src/functions.rs) (Write functions and variables)
 5. [Modules](https://github.com/Skewnart/rust-learnings/blob/main/src/module/mod.rs) (Writing module in sub-directory)
 6. [Structures](https://github.com/Skewnart/rust-learnings/blob/main/src/structures.rs) (Structure, Tuple)
 7. [References](https://github.com/Skewnart/rust-learnings/blob/main/src/pointers.rs) (Reference, Box, Pointer)
@@ -36,6 +36,8 @@ My Rust learnings cheatsheet. Currently WIP and will probably never gonna end.
 1. [Cargo](https://github.com/Skewnart/rust-learnings/blob/main/src/cargo.md) (Cargo command with parameters) (MD)
 2. [Variables](https://github.com/Skewnart/rust-learnings/blob/main/src/variable.rs)
 3. [Types](https://github.com/Skewnart/rust-learnings/blob/main/src/types.rs)
+4. [Functions](https://github.com/Skewnart/rust-learnings/blob/main/src/functions.rs)
+5. [Control Flow](https://github.com/Skewnart/rust-learnings/blob/main/src/controlflow.rs) (if, loop, while, for)
 
 [Current in doc](https://doc.rust-lang.org/stable/book/ch03-03-how-functions-work.html)
 - REFAIRE AUSSI L'ORDRE DANS MAIN.RS

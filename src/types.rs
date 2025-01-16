@@ -1,14 +1,19 @@
+/*
+    TYPE primitifs :
+    - i8, i16, i32, i64, i128     integers
+    - u8, u16, u32, u64, u128     unsigned integers
+    - f32, f64                    float / double
+    - isize, usize                size of target
+    - bool                        boolean
+    - char                        character 
 
-//TYPE primitifs :
-//i8, i16, i32, i64, i128     integers
-//u8, u16, u32, u64, u128     unsigned integers
-//f32, f64              float / double
-//isize, usize          size of target
-//bool                  boolean
-//char                  character
+    - tuple                 ! warning, tuple non nommées -> voir "structures" pour les nommées
+    - unit tuple            Tuple vide : ()
 
-//tuple                 ! warning, tuple non nommées -> voir "structures" pour les nommées
-//unit tuple            Tuple vide : ()
+    - Destructuration
+    - Arrays
+    - assignation en Decimal, Hexadecimal, Octal, Binary, Byte
+*/
 
 pub fn init_var() {
     let var_i32 : i32 = 0;
@@ -24,7 +29,7 @@ pub fn init_var() {
     let var_underscore = 0_i32;
 
     let var = 98_222;           //Decimal
-    let var = 0xff;              //Hexadecimal
+    let var = 0xff;             //Hexadecimal
     let var = 0o77;             //Octal
     let var = 0b1111_0000;      //Binary
     let var = b'A';             //Byte (u8)

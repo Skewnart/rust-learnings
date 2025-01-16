@@ -2,7 +2,7 @@
 
 mod variable;
 mod types;
-mod fonctions;
+mod functions;
 mod module;
 mod test;
 mod structures;
@@ -35,7 +35,7 @@ fn main() {
 
     //variable::using_variables();
     //types::init_var();                    //3. Types
-    //fonctions::call();                    //4. Write functions and variables
+    //functions::call();                    //4. Write functions and variables
     //module::functions::function();        //5. Module management
 
     //structures::using_structures();       //6. Structures (structure, tuple)

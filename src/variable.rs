@@ -1,3 +1,12 @@
+
+/*
+    - "let" immuable par défaut
+    - "let mut" muable 
+    - &str (string slice) =/= String
+    - Shadowing
+    - const
+*/
+
 use rand::Rng;
 
 pub fn using_variables () {
@@ -15,9 +24,9 @@ pub fn using_variables () {
 
     let string = &string[..];                       //re &str   (String -> &str)
 
-    // ^ Utilisation du shadowing : Il est possible de déclarer une variable avec le même nom dans un scope enfant ou courant. Celui-ci prendra la main
-    //   jusqu'à la fermeture du scope enfant, où la valeur précédente sera de nouveau disponible.
-    //   Le shadowing permet de ne pas utiliser le même type que la variable de base.
+    // ^ SHADOWING : une variable est re-définissable, avec le même nom. Si le shadow est fait dans un scope enfant
+    //   L'ancienne variable sera de nouveau disponible à la fin de celui-ci.
+    //   Il n'est pas obligatoire d'utiliser le même type que la variable de base.
 
     //Lecture de l'entrée utilisateur
     let mut user_input = String::new();
@@ -27,8 +36,8 @@ pub fn using_variables () {
     //Ajouter la dépendance "rand" au Cargo.toml
     let random_number: u32 = rand::thread_rng().gen_range(1..=100);     // [1, 100], voir le rang operator pour plus de possibilités
 
-    //Une variable constante est une variable qui doit avoir une valeur fixe au moment de la compilation.
-    // Tout usage d'une constante se voit attribuer la valeur de la constante directement au moment de la compilation. Il se retrouve donc directement dans le binaire.
-    // Cette valeur ne peut pas changer dans le code.
+    //const est stocké dans la mémoire du programme. Il doit être connu au moment de la compilation
+    // Utiliser une const voit sa valeur attribuée au moment de la compilation.
+    // Valeur immuable
     const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 }
