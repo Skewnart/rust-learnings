@@ -5,7 +5,7 @@
 //Remove warning non snake case dans les propriétés
 #![allow(non_snake_case)]
 
-//struct ici
+#[derive(Debug)]
 struct Person {
     name : String,
     age : i8,
@@ -28,6 +28,9 @@ pub fn using_structures() {
 
     let persontuple = PersonTuple(String::from("John"), 23, true);
     println!("{}", persontuple.0);
+
+    //L'utilisation du derive Debug permet d'avoir un affichage rapide de la valeur (de debug)
+    dbg!(&person);
 }
 
 //Pourquoi utiliser une structure tuple 

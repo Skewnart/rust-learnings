@@ -1,8 +1,4 @@
 
-// REGLES IMMUABLES
-// 1. Une ref ne peut pas vivre plus longtemps que l'objet qu'elle pointe
-// 2. &mut est exclusive, une et une seule ref mutable
-
 //Cela met en exergue le besoin d'avoir l'information de la durée de vie quand une structure intègre une reference.
 // Exemple ci-dessous, avec le "lifetime specifier" : '
 // Avec son nom ici : a

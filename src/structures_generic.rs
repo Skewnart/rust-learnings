@@ -27,7 +27,6 @@ impl<T> VectorGeneric<T> {
     // }
 }
 
-
 pub fn using_generic() {
     let vec_gen = VectorGeneric::<i32>::new();
     

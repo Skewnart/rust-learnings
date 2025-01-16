@@ -15,6 +15,7 @@ impl Rectangle {
         2.0 * (self.width + self.height)
     }
 
+    //Par défaut, une méthode impl est "private".
     pub fn get_aire(&self) -> f64 {
         self.width * self.height
     }
