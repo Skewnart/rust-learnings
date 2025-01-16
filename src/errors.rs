@@ -6,9 +6,9 @@
     - unwrap_or, unwrap_or_else, unwrap_err
 */
 
-use std::fs::File;
+use std::{fs::File, io::Error};
 
-pub fn using_errors() {
+pub fn using_errors() -> Result<File, Error>{
     let file_result = File::open("hello.txt");
 
     let file = match file_result {
@@ -17,11 +17,13 @@ pub fn using_errors() {
     };
 
     // Pareil que :
-    let file = file_result.unwrap_or_else(|error| { panic!("Problem opening the file: {error:?}"); });
+    let file = File::open("hello.txt").unwrap_or_else(|error| { panic!("Problem opening the file: {error:?}"); });
 
     //Pareil que :
-    let file = file_result.expect("Failed to open the file");
+    let file = File::open("hello.txt").expect("Failed to open the file");
 
     //plus ou moins pareil que :
-    let file = file_result?;
+    let file = File::open("hello.txt")?;
+
+    Ok(file)
 }

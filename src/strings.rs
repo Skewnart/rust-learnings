@@ -35,7 +35,7 @@ pub fn using_str() {
     s1 += &s2;              //Le add du String prend en paramètre une référence, ce qui permet de réutiliser s2 après
     println!("{}", s1);
 
-    s1 += " - " + &s2;      //Aucune copie particulière n'est faite, il n'y a que des références
+    s1 = s1 + " - " + &s2;      //Aucune copie particulière n'est faite, il n'y a que des références
 
     let new_s = format!("{} - {}", s1, s2);     //Même utilisation qu'un println!, sauf que format! n'envoie rien dans la sortie standard, juste il renvoie un string
 

@@ -6,6 +6,8 @@
     - for
 */
 
+use core::num;
+
 pub fn using_controlflows() {
     let number = 10;
 
@@ -24,8 +26,10 @@ pub fn using_controlflows() {
     loop {
         for i in 1..=10 {
             println!("Number : {number}");
+            if i == 5 {
+                break;
+            }
         }
-        break;
     }
 
     //Loop peut renvoyer une valeur
@@ -35,11 +39,12 @@ pub fn using_controlflows() {
         if counter == 10 {
             break counter;
         }
-    }
+    };
 
     //Loop labels
     'looplabel : loop {
-        loop {
+        counter += 1;
+        if counter == 15 {
             break 'looplabel;
         }
     }
@@ -64,7 +69,7 @@ pub fn using_controlflows() {
         println!("The value is: {value}");
     }
 
-    let opt = Option::None;
+    let opt: Option<i32> = Option::None;
     if let Some(value) = opt {
         println!("The value is: {value}");
     }

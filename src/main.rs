@@ -25,6 +25,10 @@ mod closures;
 mod threads;
 mod trait_object_dyn;
 mod unsafe_code;
+mod generic;
+mod control_flow;
+mod errors;
+mod lifetime;
 
 fn main() {
 

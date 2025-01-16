@@ -28,6 +28,6 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     }
 }
 
-fn function_mut(x: &'a mut i32, y: &'a mut i32) -> &'a mut i32 {
-    return x;
+fn function_mut<'a>(x: &'a mut i32, y: &'a mut i32) -> &'a mut i32 {
+    x
 }

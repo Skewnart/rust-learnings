@@ -26,7 +26,7 @@ pub fn using_ownership() {
     let string = String::from("Hello");
     takes_ownership(string); // string devient inutilisable
 
-    let string2 = String::from("Hello");
+    let mut string2 = String::from("Hello");
     string2 = takes_and_returns_ownership(string2); //string2 perd une première fois l'owernship puis le récupère à la fin de la fonction
 
     does_not_take_ownership(&string2);
@@ -58,11 +58,11 @@ fn mutable_reference(s : &mut String) {
     s.push_str(" added");
 }
 
-fn dangle() -> &String {
-    let s = String::from("Hello");
-    &s // Retourne une référence à s
+// fn dangle<'a>() -> &'a String {
+//     let s = String::from("Hello");
+//     &s          // Retourne une référence à s
 
     //Ce qui est une très mauvaise pratique, car s est détruit après cette ligne (son scope),
     //le scope étant plus petit que l'endroit où il envoyé, ca impliquerait d'avoir un lifetime static proposé par Rust (seconde mauvaise pratique, car c'est sûrement pas ce qu'on veut)
     // voir les règles d'élision de lifetimes 
-}
+// }

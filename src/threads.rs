@@ -66,11 +66,12 @@ fn using_channel() {
         let valeur = String::from("Coucou");  
         
         tx_clone.send(valeur).unwrap(); 
-        }); 
+    });
         
-        // Thread qui reçoit, par ailleurs thread principal. 
-        let id = thread::current().id(); 
-        println!("B - Je suis le thread qui reçoit : {:?}.", id);  
+    // Thread qui reçoit, par ailleurs thread principal. 
+    let id = thread::current().id(); 
+    println!("B - Je suis le thread qui reçoit : {:?}.", id);
+    
     let message = rx.recv().unwrap(); 
     println!("Message reçu par B envoyé par A : {}", message);
 }
