@@ -10,12 +10,12 @@ mod structures_impl;
 mod pointers;
 mod arrays;
 mod strings;
-mod borrow;
+mod ownership;
 mod structures_generic;
 mod structures_references;
 mod trait_predefined;
 mod enumerations;
-mod motifs;
+mod pattern_matching;
 mod traits;
 mod trait_operator_overload;
 mod char_string;
@@ -50,7 +50,7 @@ fn main() {
     //arrays::using_slice();
     
     //strings::using_str();                 //9. Strings
-    //borrow::example_borrow_owner();       //10. Borrow / Owner
+    //ownership::using_ownership();         //10. Borrow / Owner
 
                                             //11. Structures :
     //structures_impl::using_impl();        // Impl
@@ -60,7 +60,7 @@ fn main() {
     //trait_predefined::using_traits();     //12. Traits (prédéfinis)
 
     //enumerations::using_enum();           //13. Enumerations
-    //motifs::using_pattern_matching();     //14. Pattern matching
+    //pattern_matching::using_pattern_matching();     //14. Pattern matching
 
     //traits::using_traits();               //15. Traits
     //traits::using_traits_2();
