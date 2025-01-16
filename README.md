@@ -13,14 +13,14 @@ My Rust learnings cheatsheet. Currently WIP and will probably never gonna end.
 7. [References](https://github.com/Skewnart/rust-learnings/blob/main/src/pointers.rs) (Reference, Box, Pointer)
 8. [Arrays](https://github.com/Skewnart/rust-learnings/blob/main/src/arrays.rs) (Array, Vector, Slice)
 9. [Strings](https://github.com/Skewnart/rust-learnings/blob/main/src/strings.rs)
-10. [Borrowing](https://github.com/Skewnart/rust-learnings/blob/main/src/borrow.rs) (Borrow / Owner)
+10. [Borrowing](https://github.com/Skewnart/rust-learnings/blob/main/src/ownership.rs) (Borrow / Owner)
 11. Structures
       - [Impl](https://github.com/Skewnart/rust-learnings/blob/main/src/structures_impl.rs)
       - [Generic](https://github.com/Skewnart/rust-learnings/blob/main/src/structures_generic.rs)
       - [References](https://github.com/Skewnart/rust-learnings/blob/main/src/structures_references.rs)
 12. [Predefined Traits](https://github.com/Skewnart/rust-learnings/blob/main/src/trait_predefined.rs)
 13. [Enum](https://github.com/Skewnart/rust-learnings/blob/main/src/enumerations.rs)
-14. [Pattern matching](https://github.com/Skewnart/rust-learnings/blob/main/src/motifs.rs) (Motifs)
+14. [Pattern matching](https://github.com/Skewnart/rust-learnings/blob/main/src/pattern_matching.rs) (Motifs)
 15. [Traits](https://github.com/Skewnart/rust-learnings/blob/main/src/traits/mod.rs) (2 methods)
 16. [Operator overload](https://github.com/Skewnart/rust-learnings/blob/main/src/trait_operator_overload.rs) (bond with 12. Predefined Traits)
 17. [Char / String](https://github.com/Skewnart/rust-learnings/blob/main/src/char_string.rs) (Char / String (String & str))
@@ -37,9 +37,25 @@ My Rust learnings cheatsheet. Currently WIP and will probably never gonna end.
 2. [Variables](https://github.com/Skewnart/rust-learnings/blob/main/src/variable.rs)
 3. [Types](https://github.com/Skewnart/rust-learnings/blob/main/src/types.rs)
 4. [Functions](https://github.com/Skewnart/rust-learnings/blob/main/src/functions.rs)
-5. [Control Flow](https://github.com/Skewnart/rust-learnings/blob/main/src/controlflow.rs) (if, loop, while, for)
+5. [Control Flow](https://github.com/Skewnart/rust-learnings/blob/main/src/control_flow.rs) (if, loop, while, for)
+6. [Ownership](https://github.com/Skewnart/rust-learnings/blob/main/src/ownership.rs) (ownership, reference, slice type)
+7. [Structures](https://github.com/Skewnart/rust-learnings/blob/main/src/structures.rs) (Structure, Tuple)
+8. Structures
+      - [Impl](https://github.com/Skewnart/rust-learnings/blob/main/src/structures_impl.rs)
+      - [Generic](https://github.com/Skewnart/rust-learnings/blob/main/src/structures_generic.rs)
+      - [References](https://github.com/Skewnart/rust-learnings/blob/main/src/structures_references.rs)
+9. [Enum](https://github.com/Skewnart/rust-learnings/blob/main/src/enumerations.rs)
+10. [Modules](https://github.com/Skewnart/rust-learnings/blob/main/src/module/mod.rs) (Writing module in sub-directory)
+11. [Vector](https://github.com/Skewnart/rust-learnings/blob/main/src/vectors.rs)
+12. [String](https://github.com/Skewnart/rust-learnings/blob/main/src/strings.rs)
+13. [Collections](https://github.com/Skewnart/rust-learnings/blob/main/src/collections.rs) (BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, LinkedList, VecDeque)
+14. [Errors](https://github.com/Skewnart/rust-learnings/blob/main/src/errors.rs)
+15. [Generic](https://github.com/Skewnart/rust-learnings/blob/main/src/generic.rs)
+16. [Traits](https://github.com/Skewnart/rust-learnings/blob/main/src/traits/mod.rs) (2 methods)
+16. [Lifetime](https://github.com/Skewnart/rust-learnings/blob/main/src/lifetime.rs)
 
-[Current in doc](https://doc.rust-lang.org/stable/book/ch03-03-how-functions-work.html)
+
+- Tout ce qui est déjà couvert doit bouger
 - REFAIRE AUSSI L'ORDRE DANS MAIN.RS
 
 ## Clone and launch it
