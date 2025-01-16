@@ -50,8 +50,22 @@ pub fn using_vectors() {
     vec_mutable.reserve(5);     //Regarde si on peut accueillir 5 éléments, sinon augmentation de capacité, avec les x2
     vec_mutable.reserve_exact(7);
 
+    vec_mutable.push(1);        //Ajouter un élément
+    vec_mutable.push(2);
+
     // !! Comme la capacity double quand elle n'est pas assez grande, attention si cette opération est fréquente ça va devenir lent.
     // Auquel cas utiliser une VecDequeue
+
+    for i in &vec_mutable {
+        println!("{}", i);
+    }
+
+    //Stocker plusieurs types : passer par un enum
+    let row = vec![
+        SpreadsheetCell::Int(3),
+        SpreadsheetCell::Text(String::from("blue")),
+        SpreadsheetCell::Float(10.12),
+    ];
 
     other_methods();
 }
@@ -77,4 +91,10 @@ fn other_methods() {
 
 fn display_type<T>(_: &T) {
     println!("{}", std::any::type_name::<T>());
+}
+
+enum SpreadsheetCell {
+    Int(i32),
+    Float(f64),
+    Text(String),
 }
