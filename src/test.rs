@@ -11,27 +11,28 @@
     pour utiliser "eq" et "ne", il faut que le premier objet implémente #[derive(PartialEq, Debug)]
 */
 
+#[derive(Clone, Copy)]
 struct Color(u32, u32, u32);
 
 enum Colors {
-    RED,
-    BLUE,
-    YELLOW,
+    Red,
+    Blue,
+    Yellow,
     TrueColor(Color)
 }
 impl Colors {
     fn get_color(&self) -> Color {
         match self {
-            Colors::RED => Color(255, 0, 0),
-            Colors::BLUE => Color(0, 0, 255),
-            Colors::YELLOW => Color(255, 255, 0),
-            Colors::TrueColor(color) => color,
+            Colors::Red => Color(255, 0, 0),
+            Colors::Blue => Color(0, 0, 255),
+            Colors::Yellow => Color(255, 255, 0),
+            Colors::TrueColor(color) => *color,
         }
     }
 
-    fn get_panic(number : i8) -> Option<i8> {
+    fn get_panic(number : i32) -> Option<i32> {
         if number > 100 {
-            panic!("Error");
+            panic!("Should be less or equal than 100");
         }
 
         Option::Some(number)
@@ -44,7 +45,7 @@ mod tests {
 
     #[test]
     fn test_get_color() {
-        let red = Colors::RED.get_color();
+        let red = Colors::Red.get_color();
         assert_eq!(red.0, 255);
     }
 
@@ -56,7 +57,7 @@ mod tests {
 
     #[test]
     fn it_works() -> Result<(), String> {
-        let color = Colors::BLUE.get_color();
+        let color = Colors::Blue.get_color();
         if color.0 == 0 {
             Ok(())
         }
