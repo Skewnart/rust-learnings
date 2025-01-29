@@ -44,8 +44,11 @@ You can directly clone this repo and launch the project directly to test example
 git clone https://github.com/skewnart/rust-learnings.git
 cd rust-learnings
 
-## Uncomment in main.rs your wanted module
+## Just launch run command to see all possible options
 
-cargo build
 cargo run
+
+## and then launch it with the wanted module number
+
+cargo run -- 10
 ```
