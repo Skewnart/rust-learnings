@@ -28,6 +28,10 @@ pub fn using_str() {
         println!("{}", s);
     }
 
+    for s in "Hello world !".split_whitespace() { // split par les mots
+        println!("{}", s);
+    }
+
     let mut s1 = String::from("Hello, ");
     let s2 = String::from("world!");
 

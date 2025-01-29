@@ -79,6 +79,9 @@ fn using_hash_map() {
         println!("Key {}, Value {}", key, value);
     }
 
+    //Récupère l'entry, sinon l'insère et la retourne
+    hashmap.entry("F").or_insert("Finlande".to_string());
+
     // BTreeMap
     // Comme tout Binary Tree, les enfants de chaque noeud sont toujours par défaut inférieur à leur parent direct
     // Ca agit donc comme un excellent moyen d'avoir un type de Collection optimisé pour la recherche du max
