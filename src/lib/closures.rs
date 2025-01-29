@@ -1,4 +1,4 @@
-use crate::vectors;
+use crate::lib::vectors;
 
 #[derive(Debug)]
 struct Person<'a> {

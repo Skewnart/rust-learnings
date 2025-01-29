@@ -18,7 +18,7 @@ My Rust learnings cheatsheet. Will probably never gonna end.
       - [References](https://github.com/Skewnart/rust-learnings/blob/main/src/structures_references.rs)
 10. [Enum](https://github.com/Skewnart/rust-learnings/blob/main/src/enumerations.rs)
 11. [Modules](https://github.com/Skewnart/rust-learnings/blob/main/src/module/mod.rs) (Writing module in sub-directory)
-12. [Vector](https://github.com/Skewnart/rust-learnings/blob/main/src/vectors.rs)
+12. [Vectors](https://github.com/Skewnart/rust-learnings/blob/main/src/vectors.rs)
 13. [String](https://github.com/Skewnart/rust-learnings/blob/main/src/strings.rs)
 14. [Char / String](https://github.com/Skewnart/rust-learnings/blob/main/src/char_string.rs) (Char / String (String & str))
 15. [Collections](https://github.com/Skewnart/rust-learnings/blob/main/src/collections.rs) (BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, LinkedList, VecDeque)
@@ -28,15 +28,13 @@ My Rust learnings cheatsheet. Will probably never gonna end.
 19. [Predefined Traits](https://github.com/Skewnart/rust-learnings/blob/main/src/trait_predefined.rs)
 20. [Operator overload](https://github.com/Skewnart/rust-learnings/blob/main/src/trait_operator_overload.rs)
 21. [Lifetime](https://github.com/Skewnart/rust-learnings/blob/main/src/lifetime.rs)
+22. [Tests](https://github.com/Skewnart/rust-learnings/blob/main/src/test.rs) (Tests - how to write)
 
-22. [References](https://github.com/Skewnart/rust-learnings/blob/main/src/pointers.rs) (Reference, Box, Pointer)
-23. [Tests](https://github.com/Skewnart/rust-learnings/blob/main/src/test.rs) (Tests - how to write)
+23. [References](https://github.com/Skewnart/rust-learnings/blob/main/src/pointers.rs) (Reference, Box, Pointer)
 24. [Closures](https://github.com/Skewnart/rust-learnings/blob/main/src/closures.rs)
 25. [Threads](https://github.com/Skewnart/rust-learnings/blob/main/src/threads.rs)
 26. [Trait Object](https://github.com/Skewnart/rust-learnings/blob/main/src/trait_object_dyn.rs)
 27. [Unsafe](https://github.com/Skewnart/rust-learnings/blob/main/src/unsafe_code.rs)
-
-- REFAIRE L'ORDRE DANS main.rs et dans README.md
 
 ## Clone and launch it
 
