@@ -57,9 +57,9 @@ pub fn run(number : i8) {
     btreemap.insert(21, ("Operator overload", Box::new(trait_operator_overload::using_operators)));
     btreemap.insert(22, ("Lifetime", Box::new(lifetime::using_lifetimes)));
     btreemap.insert(23, ("Tests", Box::new(|| { println!("Go check Tests file"); } )));
+    btreemap.insert(24, ("Closures", Box::new(closures::using_closure)));
 
     // À remettre ou enlever :
-    //closures
     //pointers
     //threads
     //trait_object_dyn

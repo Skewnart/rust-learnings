@@ -1,3 +1,11 @@
+/*
+    3 types de closures :
+
+    - FnOnce : Closure qui ne peut être appelée qu'une fois. Peut prendre la propriété des variables        T
+    - Fn : Closure qui "emprunte" les variables de façon immuable. Rend la propriété à la fin.              &T
+    - FnMut : Closure qui "emprunte" les variables de façon muable. Rend la propriété à la fin.             &mut T
+*/
+
 use crate::lib::vectors;
 
 #[derive(Debug)]
