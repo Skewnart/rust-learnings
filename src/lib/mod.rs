@@ -44,18 +44,26 @@ pub fn run(number : i8) {
     btreemap.insert(8, ("Structure", Box::new(|| { structures::using_structures(); structures::using_structure_tuple(); })));
     btreemap.insert(9, ("Structure impl", Box::new(|| { structures_impl::using_impl(); structures_generic::using_generic(); structures_references::using_ref(); })));
     btreemap.insert(10, ("Enum", Box::new(enumerations::using_enum)));
-    btreemap.insert(11, ("Modules", Box::new(module::functions::function)));
-    btreemap.insert(12, ("Vectors", Box::new(vectors::using_vectors)));
-    btreemap.insert(13, ("String", Box::new(strings::using_str)));
-    btreemap.insert(14, ("Char / String", Box::new(|| { char_string::using_chars(); char_string::using_strings(); char_string::using_regex(); })));
-    btreemap.insert(15, ("Collections", Box::new(collections::using_collections)));
-    btreemap.insert(16, ("Errors", Box::new(|| { errors::using_errors(); })));
-    btreemap.insert(17, ("Generic", Box::new(generic::using_generic)));
-    btreemap.insert(18, ("Traits", Box::new(|| { traits::using_traits(); traits::using_traits_2(); })));
-    btreemap.insert(19, ("Predefined traits", Box::new(trait_predefined::using_traits)));
-    btreemap.insert(20, ("Operator overload", Box::new(trait_operator_overload::using_operators)));
-    btreemap.insert(21, ("Lifetime", Box::new(lifetime::using_lifetimes)));
-    btreemap.insert(22, ("Tests", Box::new(|| { println!("Go check Tests file"); } )));
+    btreemap.insert(11, ("Pattern matching", Box::new(pattern_matching::using_pattern_matching)));
+    btreemap.insert(12, ("Modules", Box::new(module::functions::function)));
+    btreemap.insert(13, ("Vectors", Box::new(vectors::using_vectors)));
+    btreemap.insert(14, ("String", Box::new(strings::using_str)));
+    btreemap.insert(15, ("Char / String", Box::new(|| { char_string::using_chars(); char_string::using_strings(); char_string::using_regex(); })));
+    btreemap.insert(16, ("Collections", Box::new(collections::using_collections)));
+    btreemap.insert(17, ("Errors", Box::new(|| { errors::using_errors(); })));
+    btreemap.insert(18, ("Generic", Box::new(generic::using_generic)));
+    btreemap.insert(19, ("Traits", Box::new(|| { traits::using_traits(); traits::using_traits_2(); })));
+    btreemap.insert(20, ("Predefined traits", Box::new(trait_predefined::using_traits)));
+    btreemap.insert(21, ("Operator overload", Box::new(trait_operator_overload::using_operators)));
+    btreemap.insert(22, ("Lifetime", Box::new(lifetime::using_lifetimes)));
+    btreemap.insert(23, ("Tests", Box::new(|| { println!("Go check Tests file"); } )));
+
+    // À remettre ou enlever :
+    //closures
+    //pointers
+    //threads
+    //trait_object_dyn
+    //unsafe_code
 
     if !btreemap.contains_key(&number) {
         eprintln!("Merci de mettre un numéro correct en paramètre.");
