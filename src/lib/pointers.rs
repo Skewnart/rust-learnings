@@ -5,7 +5,6 @@
 
 use std::env::consts;
 
-
 // REFERENCE
 //Une référence ne peut pas être nulle.
 pub fn using_refs() {

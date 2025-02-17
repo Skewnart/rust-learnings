@@ -59,9 +59,9 @@ pub fn run(number : i8) {
     btreemap.insert(23, ("Lifetime", Box::new(lifetime::using_lifetimes)));
     btreemap.insert(24, ("Tests", Box::new(|| { println!("Go check Tests file"); } )));
     btreemap.insert(25, ("Closures", Box::new(closures::using_closure)));
+    btreemap.insert(26, ("Smart pointers", Box::new(|| { pointers::using_refs(); pointers::using_box(); pointers::using_pointers();} )));
 
     // À remettre ou enlever :
-    //pointers
     //threads
     //trait_object_dyn
     //unsafe_code
