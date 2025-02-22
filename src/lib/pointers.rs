@@ -60,3 +60,31 @@ pub fn using_pointers() {
         println!("{}", *var_f64_pointer_mut);
     }
 }
+
+// Rc<T> : Reference Count
+//  Pour un smart pointers possédant plusieurs propriétaires.
+//  En fait, à chaque fois que le Rc subit un "clone()", le compteur s'incrémente
+//  À chaque fois qu'une variable utilisant ce Rc sort de son scope (méthode drop), le compteur dérémente
+//  Et quand il atteint 0, le Rc est détruit
+enum List {
+    Cons(i32, Rc<List>),
+    Nil,
+}
+
+use List::{Cons, Nil};
+use std::rc::Rc;
+
+pub fn using_Rc() {
+    let a = Rc::new(Cons(5, Rc::new(Cons(10, Rc::new(Nil)))));
+    println!("count after creating a = {}", Rc::strong_count(&a));
+    let b = Cons(3, Rc::clone(&a));
+    println!("count after creating b = {}", Rc::strong_count(&a));
+    {
+        let c = Cons(4, Rc::clone(&a));
+        println!("count after creating c = {}", Rc::strong_count(&a));
+    }
+    println!("count after c goes out of scope = {}", Rc::strong_count(&a));
+}
+
+// RefCell : Owner unique. Interior Mutability : est muable malgré l'immuabilité.
+//  Inside unsafe. Borrow checking au runtime est non à la compilation
