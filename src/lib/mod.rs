@@ -61,6 +61,8 @@ pub fn run(number : i8) {
     btreemap.insert(25, ("Closures", Box::new(closures::using_closure)));
     btreemap.insert(26, ("Smart pointers", Box::new(|| { pointers::using_refs(); pointers::using_box(); pointers::using_pointers(); pointers::using_Rc(); } )));
 
+    //METTRE A JOUR LE README !
+    
     // À remettre ou enlever :
     //threads
     //trait_object_dyn
