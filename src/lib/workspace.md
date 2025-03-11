@@ -24,6 +24,7 @@ Mieux pour séparer les crates `bin` des crates `lib`
 
 ``` rust
 [workspace]
+resolver = "3"
 
 members = [
     "lib_crate",
@@ -39,7 +40,20 @@ members = [
 ### Cargo.toml (bin_crate level)
 
 ``` rust
-[dependencies]
+[package]
+name = "bin_crate"
+version = "0.1.0"
+edition = "2024"
 
+[dependencies]
 lib_crate = { path = "../lib_crate" }
+```
+
+### Cargo.toml (lib_crate level)
+
+``` rust
+[package]
+name = "lib_crate"
+version = "0.2.0"
+edition = "2024"
 ```
