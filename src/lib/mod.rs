@@ -60,11 +60,11 @@ pub fn run(number : i8) {
     btreemap.insert(24, ("Tests", Box::new(|| { println!("Go check Tests file"); } )));
     btreemap.insert(25, ("Closures", Box::new(closures::using_closure)));
     btreemap.insert(26, ("Smart pointers", Box::new(|| { pointers::using_refs(); pointers::using_box(); pointers::using_pointers(); pointers::using_Rc(); } )));
+    btreemap.insert(27, ("Threads", Box::new(|| { threads::classic_spawn(); threads::rayon_method(); threads::using_par_iter(); threads::using_channel(); threads::using_mutex(); } )));
 
     //METTRE A JOUR LE README !
     
     // À remettre ou enlever :
-    //threads
     //trait_object_dyn
     //unsafe_code
 

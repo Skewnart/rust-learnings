@@ -1,18 +1,16 @@
 extern crate rayon;
 
+use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
 use std::sync::mpsc::{self, channel};
 use rayon::prelude::*; 
 
 pub fn using_threads() {
-    // classic_spawn();
-    // rayon_method();
-    // using_par_iter();
-    using_channel();
+    classic_spawn(); rayon_method(); using_par_iter(); using_channel();
 }
 
-fn classic_spawn() {
+pub fn classic_spawn() {
     let thread_2 = thread::spawn(move || {
         for i in 1..=20 {
             println!("Thread 2 : {}", i);
@@ -28,7 +26,7 @@ fn classic_spawn() {
     thread_2.join().unwrap();
 }
 
-fn rayon_method() {
+pub fn rayon_method() {
     let (variable_1, variable_2) = rayon::join(rayon_fn_1, rayon_fn_2);
 }
 
@@ -46,16 +44,17 @@ fn rayon_fn_2() {
     }
 }
 
-fn using_par_iter() {
+pub fn using_par_iter() {
     let range = (1..=100);
     range.into_par_iter().for_each(|x| println!("{}", x));
 }
 
-fn using_channel() {
+pub fn using_channel() {
     let (tx, rx) = channel();
     
     //Clone du transmetteur. On peuet très bien avoir plusieurs threads qui envoie et un seul qui reçoit, ou pas.
     let tx_clone = mpsc::Sender::clone(&tx);
+    let tx_clone2 = tx.clone();
 
     // Thread qui envoie. 
     thread::spawn(move|| { 
@@ -74,4 +73,30 @@ fn using_channel() {
     
     let message = rx.recv().unwrap(); 
     println!("Message reçu par B envoyé par A : {}", message);
+    // recv renvoie un Ok(val) quand il y a une valeur,
+    //      Err quand l'écoute doit s'arrêter
+
+    // recv() est bloquant, try_recv() ne l'est pas 
+    // On peut également itérer sur le receveur, qui va écouter en boucle (bloquant), jusqu'à recevoir un Err (qui va libérer l'itération)
+}
+
+pub fn using_mutex() {
+    let counter = Arc::new(Mutex::new(0));
+    let mut handles = vec![];
+
+    for _ in 0..10 {
+        let counter = Arc::clone(&counter);
+        let handle = thread::spawn(move || {
+            let mut num = counter.lock().unwrap();
+
+            *num += 1;
+        });
+        handles.push(handle);
+    }
+
+    for handle in handles {
+        handle.join().unwrap();
+    }
+
+    println!("Result: {}", *counter.lock().unwrap());
 }
