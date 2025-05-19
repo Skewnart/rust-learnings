@@ -18,7 +18,7 @@ struct S3 {
     valeur:  String 
 } 
 
-fn fn_static<T:Display>(var_struct: T) {
+fn fn_surcharge_static<T:Display>(var_struct: T) {
     println!("{}", var_struct);
 }
 
@@ -26,12 +26,12 @@ pub fn using_trait_object() {
     let s1 = S1{valeur : 42}; 
     let s2 = S2{valeur : 3.30}; 
     let s3 = S3{valeur : "Bonjour tout le monde.".to_string()}; 
-    fn_static(s1.valeur); 
-    fn_static(s2.valeur); 
-    fn_static(s3.valeur);
+    fn_surcharge_static(s1.valeur); 
+    fn_surcharge_static(s2.valeur); 
+    fn_surcharge_static(s3.valeur);
 
-    fonction_surcharge_dynamique(&s1);
-    fonction_surcharge_dynamique(&s2);
+    fn_surcharge_dynamique(&s1);
+    fn_surcharge_dynamique(&s2);
 }
 
 trait Affichage { 
@@ -39,27 +39,24 @@ trait Affichage {
 }
 
 impl Affichage for S1 { 
- 
     fn afficher_valeur(&self) { 
-       println!("Entier {:?}", self.valeur); 
+        println!("Entier {:?}", self.valeur); 
     } 
- } 
-  
- impl Affichage for S2 { 
-  
-    fn afficher_valeur(&self) { 
-       println!("Flottant {:?}", self.valeur); 
-    } 
- } 
-  
- impl Affichage for S3 { 
-  
-    fn afficher_valeur(&self) { 
-       println!("String {:?}", self.valeur); 
-    } 
- } 
+} 
 
-fn fonction_surcharge_dynamique(objet_implementant_trait: 
+impl Affichage for S2 { 
+    fn afficher_valeur(&self) { 
+        println!("Flottant {:?}", self.valeur); 
+    } 
+} 
+
+impl Affichage for S3 { 
+    fn afficher_valeur(&self) { 
+        println!("String {:?}", self.valeur); 
+    } 
+} 
+
+fn fn_surcharge_dynamique(objet_implementant_trait: 
     &(dyn Affichage + 'static)) { 
      
        objet_implementant_trait.suivi_appel_surcharge_dynamique(); 

@@ -29,8 +29,8 @@ My Rust learnings cheatsheet. Will probably never gonna end.
 20. [Traits](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/traits/mod.rs) (2 methods)
 21. [Predefined Traits](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/trait_predefined.rs)
 22. [Operator overload](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/trait_operator_overload.rs)
-24. [Lifetime](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/lifetime.rs)
 23. [Tests](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/test.rs) (Tests - how to write)
+24. [Lifetime](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/lifetime.rs)
 25. [Closures](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/closures.rs)
 26. [Smart pointers](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/pointers.rs) (Reference, Box, Pointer)
 
