@@ -1,6 +1,11 @@
 // Le match doit être exhaustif pour ne pas provoquer d'erreur de compilation
 // Placeholder "_"
 
+struct Point {
+    x: i32,
+    y: i32,
+}
+
 enum Personnage{ 
     Heros,                                                          // Structure unité
     Fantome { points_de_vie : u32, indice_invisibilite : u32},      // Structure
@@ -46,10 +51,27 @@ pub fn using_pattern_matching() {
         _ => println!("Autre")
     }
 
-
     let prenom = "Hector"; 
     match prenom { 
         "Arthur" | "Sophie" | "Hector" => println!("Quel joli prénom."), 
         _ => println!("Quel prénom joli.") 
-    }; 
+    };
+
+    let optional = Some(10);
+    match optional {
+        Some(value) if value > 5 => println!("Le nombre est supérieur à 5 : {}", value),
+        Some(value) => println!("Le nombre est : {}", value),
+        _ => println!("Aucun nombre fourni")
+    }
+
+    let x = 'c';
+    match x {
+        'a'..='j' => println!("early ASCII letter"),
+        'k'..='z' => println!("late ASCII letter"),
+        _ => println!("something else"),
+    }
+
+    let p = Point { x: 0, y: 7 };
+
+    let Point { x, y } = p;
 }
