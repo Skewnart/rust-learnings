@@ -29,6 +29,7 @@ mod generic;
 mod control_flow;
 mod errors;
 mod lifetime;
+mod supertraits;
 
 pub fn run(number : i8) {
 
@@ -63,6 +64,7 @@ pub fn run(number : i8) {
     btreemap.insert(27, ("Threads", Box::new(|| { threads::classic_spawn(); threads::rayon_method(); threads::using_par_iter(); threads::using_channel(); threads::using_mutex(); } )));
     btreemap.insert(28, ("Trait object", Box::new(|| { trait_object_dyn::using_trait_object(); } )));
     btreemap.insert(29, ("Unsafe code", Box::new(|| { unsafe_code::using_unsafe(); } )));
+    btreemap.insert(30, ("Supertraits", Box::new(supertraits::using_supertraits)));
 
     if !btreemap.contains_key(&number) {
         eprintln!("Merci de mettre un numéro correct en paramètre.");
