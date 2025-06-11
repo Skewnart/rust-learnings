@@ -6,8 +6,6 @@
     - FnMut : Closure qui "emprunte" les variables de façon muable. Rend la propriété à la fin.             &mut T
 */
 
-use crate::lib::vectors;
-
 #[derive(Debug)]
 struct Person<'a> {
     name: &'a str,
@@ -38,4 +36,21 @@ pub fn using_closure() {
     
     let vecteur_2 = vec![10, 20, 30, 40, 50]; 
     println!("Comparaison vecteur_2 : {}", comparaison_vecteur_cible(vecteur_2)); 
+}
+
+pub fn using_function_pointers() {
+    println!("{}", do_twice(add_one, 5));
+    println!("{}", return_closure_add_one()(5));
+}
+
+fn add_one(x: i32) -> i32 {
+    x + 1
+}
+
+fn do_twice(f: fn(i32) -> i32, arg: i32) -> i32 {
+    f(f(arg))
+}
+
+fn return_closure_add_one() -> impl Fn(i32) -> i32 {
+    |x| x + 1
 }
