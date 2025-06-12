@@ -30,6 +30,7 @@ mod control_flow;
 mod errors;
 mod lifetime;
 mod supertraits;
+mod sockets;
 
 pub fn run(number : i8) {
 
@@ -65,6 +66,7 @@ pub fn run(number : i8) {
     btreemap.insert(28, ("Trait object", Box::new(|| { trait_object_dyn::using_trait_object(); } )));
     btreemap.insert(29, ("Unsafe code", Box::new(|| { unsafe_code::using_unsafe(); } )));
     btreemap.insert(30, ("Supertraits", Box::new(supertraits::using_supertraits)));
+    btreemap.insert(31, ("Sockets", Box::new(sockets::using_sockets)));
 
     if !btreemap.contains_key(&number) {
         eprintln!("Merci de mettre un numéro correct en paramètre.");

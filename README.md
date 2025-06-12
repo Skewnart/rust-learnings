@@ -38,6 +38,7 @@ My Rust learnings cheatsheet. Will probably never gonna end.
 28. [Trait Object](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/trait_object_dyn.rs)
 29. [Unsafe](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/unsafe_code.rs)
 30. [Supertraits](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/supertraits.rs)
+31. [Sockets](https://github.com/Skewnart/rust-learnings/blob/main/src/lib/sockets.rs)
 
 ## Clone and launch it
 
