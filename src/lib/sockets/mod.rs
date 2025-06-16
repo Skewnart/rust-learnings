@@ -1,21 +1,32 @@
 // Exemple d'un serveur web reposant sur des sockets TCP entrants
 
 use std::{
-    fs, io::{prelude::*, BufReader}, net::{Shutdown, TcpListener, TcpStream}, thread, time::Duration
+    error::Error, fs, io::{prelude::*, BufReader}, net::{Shutdown, TcpListener, TcpStream}, thread, time::Duration
 };
+
+mod threadpool;
+mod pool_creation_error;
+
+use threadpool::ThreadPool;
 
 pub fn using_sockets() {
     launch_server();
 }
 
-fn launch_server() {
+fn launch_server() -> Result<(), Box<dyn Error>> {
     let listener = TcpListener::bind("127.0.0.1:7878").unwrap();
     println!("Server is running on localhost:7878");
+
+    let pool = ThreadPool::build(5)?;
     
     for stream in listener.incoming() {
         let stream = stream.unwrap();
-        handle_connection(stream);
+        pool.execute(|| {
+            handle_connection(stream);
+        });
     }
+
+    Ok(())
 }
 
 fn handle_connection(mut stream : TcpStream) {
